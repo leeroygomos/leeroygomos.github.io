@@ -1,0 +1,41 @@
+.App{
+  text-align: center;
+  background-image: linear-gradient(#000000,#1d2237,#14497a);
+}
+
+.item{
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+    &__header{
+      @extend .item;
+    }
+    &__about{
+      @extend .item;
+    }
+    &__projects{
+      @extend .item;
+    }
+    &__experience{
+      @extend .item;
+    }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100vh);
+  transition: all 0.5s;
+}
+
+.show {
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0vh);
+  transition: all 0.5s;
+}
+
