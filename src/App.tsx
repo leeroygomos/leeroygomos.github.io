@@ -3,12 +3,14 @@ import './App.scss';
 
 import ScrollIntoView from './components/Animations';
 import Navigation from './components/Navigation';
+import AboutMe from './components/AboutMe';
+import Projects from './components/Projects';
 
 function App() {
   const options = {
     root: null,
-    rootMargin: '25% 0px',
-    threshold: 0.5,
+    rootMargin: '30% 0px',
+    threshold: 0.3,
   };
 
   const [headerRef, isHeaderVisible] = ScrollIntoView(options);
@@ -19,22 +21,21 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-
-      <header ref={headerRef} className={isHeaderVisible ? "show item__header" : "hidden item__header"}>
-          Lee Roy Gomos
-      </header>
-      
-      <div ref={aboutRef} className={isAboutVisible ? "show item__about" : "hidden item__about"}>
-        About Me
-      </div>
-
-      <div ref={projectsRef} className={isProjectsVisible ? "show item__projects" : "hidden item__projects"}>
-        Projects
-      </div>
-      
-      <div ref={experienceRef} className={isExperienceVisible ? "show item__experience" : "hidden item__experience"}>
+      <section ref={headerRef} className={isHeaderVisible ? "show item__header" : "hidden item__header"}>
+        <h1>Lee Roy Gomos</h1>
+        <p>Full Stack Developer</p>
+      </section>
+      <section ref={aboutRef} className={isAboutVisible ? "show item__about" : "hidden item__about"}>
+        <AboutMe />
+        {/* ABOUT ME */}
+      </section>
+      <section ref={projectsRef} className={isProjectsVisible ? "show item__projects" : "hidden item__projects"}>
+        <Projects />
+        {/* PROJECTS */}
+      </section>
+      <section ref={experienceRef} className={isExperienceVisible ? "show item__experience" : "hidden item__experience"}>
         Experience
-      </div>
+      </section>
 
     </div>
   );

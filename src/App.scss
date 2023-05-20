@@ -8,7 +8,6 @@
   display: flex;
   color: white;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
     &__header{
@@ -29,13 +28,13 @@
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100vh);
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .show {
   opacity: 1;
   filter:blur(0);
   transform: translateX(0vh);
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
