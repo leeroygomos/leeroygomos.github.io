@@ -8,10 +8,13 @@
   display: flex;
   color: white;
   flex-direction: column;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
+  scroll-snap-align: start;
+  scroll-padding: 0;
+  padding-bottom: 10vh;
     &__header{
       @extend .item;
+      justify-content: center;
     }
     &__about{
       @extend .item;
@@ -21,6 +24,10 @@
     }
     &__experience{
       @extend .item;
+    }
+    &__contact{
+      @extend .item;
+      justify-content: center;
     }
 }
 

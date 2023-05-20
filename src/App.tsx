@@ -9,14 +9,15 @@ import Projects from './components/Projects';
 function App() {
   const options = {
     root: null,
-    rootMargin: '30% 0px',
-    threshold: 0.3,
+    rootMargin: '0px',
+    threshold: 0.2,
   };
 
   const [headerRef, isHeaderVisible] = ScrollIntoView(options);
   const [aboutRef, isAboutVisible] = ScrollIntoView(options);
   const [projectsRef, isProjectsVisible] = ScrollIntoView(options);
-  const [experienceRef, isExperienceVisible] = ScrollIntoView(options);
+  // const [experienceRef, isExperienceVisible] = ScrollIntoView(options);
+  const [contactRef, isContactVisible] = ScrollIntoView(options);
 
   return (
     <div className="App">
@@ -33,10 +34,10 @@ function App() {
         <Projects />
         {/* PROJECTS */}
       </section>
-      <section ref={experienceRef} className={isExperienceVisible ? "show item__experience" : "hidden item__experience"}>
-        Experience
+      <section ref={contactRef} className={isContactVisible ? "show item__contact" : "hidden item__contact"}>
+        {/* <Experience /> */}
+        CONTACT
       </section>
-
     </div>
   );
 }

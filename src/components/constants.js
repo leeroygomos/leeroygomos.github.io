@@ -67,3 +67,30 @@ export const projectItems = [
         tags: ["Python", "AI"]
     },
 ];
+
+export const languages = ["JavaScript", "Python", "C++", "C", "Apex", "HTML", "CSS", "SQL"];
+export const frameworks = ["Node.js", "React", "Express.js", "Django"];
+export const technologies = ["Salesforce", "Git", "Docker", "Heroku", "PostgreSQL"];
+
+export const certifications = [
+    {
+        name: 'JavaScript Developer I',
+        date: 'January 10, 2023',
+        img: '/images/certifications/javascript.png'
+    },
+    {
+        name: 'Service Cloud Consultant',
+        date: 'October 25, 2022',
+        img: '/images/certifications/servicecloud.png'
+    },
+    {
+        name: 'Platform Developer I',
+        date: 'February 8, 2022',
+        img: '/images/certifications/platformdev1.png'
+    },
+    {
+        name: 'Administrator',
+        date: 'April 30, 2021',
+        img: '/images/certifications/admin.png'
+    },
+];
