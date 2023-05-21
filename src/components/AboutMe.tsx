@@ -45,19 +45,19 @@ export default function AboutMe(){
                 </div>
                 <div className='languages'>
                     <h5>Languages</h5>
-                    {languages.map(language => {return <Tag text={language} size='x-large'/>})}
+                    {languages.map(language => {return <Tag key={language} text={language} size='x-large'/>})}
                 </div>
                 <div className='frameworks'>
                     <h5>Frameworks</h5>
-                    {frameworks.map(framework => {return <Tag text={framework} size='x-large'/>})}
+                    {frameworks.map(framework => {return <Tag key={framework} text={framework} size='x-large'/>})}
                 </div>
                 <div className='technologies'>
                     <h5>Technologies</h5>
-                    {technologies.map(tech => {return <Tag text={tech} size='x-large'/>})}
+                    {technologies.map(tech => {return <Tag key={tech} text={tech} size='x-large'/>})}
                 </div>
                 <div className='certifications'>
                     <h5>Certifications</h5>
-                    {certifications.map(cert => {return <Tag text={cert.name} size='x-large'/>})}
+                    {certifications.map(cert => {return <Tag key={cert.name} text={cert.name} size='x-large'/>})}
                 </div>
             </div>  
         </div>
