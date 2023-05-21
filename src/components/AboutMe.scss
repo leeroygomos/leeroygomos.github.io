@@ -1,7 +1,7 @@
 .grid-container__about {
     display: grid;
     max-height: 100vh;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
     "left-container right-container";
     .left-container {
@@ -21,7 +21,8 @@
             height: 100%;
             p{
                 font-size: x-large;
-                margin: 1vw;
+                text-align: left;
+                margin: 0 7vw;
             }
         }
         .experience {
@@ -36,9 +37,7 @@
                     width: 100%;
                     font-size: medium;
                     text-align: right;
-                    padding-left: 7vw;
-                    padding-top: 1vh;
-                    padding-right: 1vw;
+                    padding: 1vh 1vw 0 7vw;
                 }
                 .content {
                     height: max-content;
@@ -53,40 +52,54 @@
     }
     .right-container {
         display: grid;
-        grid-template-rows: 12% 22% 22% 22% 22%;
+        grid-template-rows: 20% 15% 15% 15% 15%;
         grid-template-areas: 
             "skills"
             "languages"
             "frameworks"
             "technologies"
             "certifications";
-            border-top-style: solid;
-            border-bottom-style: solid;
+            border-style: solid solid solid none;
             border-width: 0.3vw;
             border-color: black;
             border-radius: 20% 0 0 20%;
         .skills {
             grid-area: skills;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .languages {
             grid-area: languages;
             text-align: left;
             padding-left: 10vw;
+            h5{
+                margin-bottom: 1vh;
+            }
         }
         .frameworks {
             grid-area: frameworks;
             text-align: left;
             padding-left: 10vw;
+            h5{
+                margin-bottom: 1vh;
+            }
         }
         .technologies {
             grid-area: technologies;
             text-align: left;
             padding-left: 10vw;
+            h5{
+                margin-bottom: 1vh;
+            }
         }
         .certifications {
             grid-area: certifications;
             text-align: left;
             padding-left: 10vw;
+            h5{
+                margin-bottom: 1vh;
+            }
         }
         
     }
