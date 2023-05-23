@@ -37,6 +37,7 @@ function App() {
       <section ref={contactRef} className={isContactVisible ? "show item__contact" : "hidden item__contact"}>
         <Contact />
       </section>
+      <footer className="footer">FOOTER</footer>
     </div>
   );
 }

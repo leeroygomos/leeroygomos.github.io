@@ -4,7 +4,7 @@
 }
 
 .item{
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   color: white;
   flex-direction: column;
@@ -15,7 +15,7 @@
     &__header{
       @extend .item;
       div{
-        height: 90vh;
+        height: 100vh;
         margin: 2vh;
         display: flex;
         flex-direction: column;
@@ -23,6 +23,7 @@
         font-size: calc(10px + 5vmin);
         border: #000000 solid 0.3vw;
         border-radius: 2%;
+        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
       }
     }
     &__about{

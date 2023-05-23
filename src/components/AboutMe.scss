@@ -1,6 +1,9 @@
 .grid-container__about {
     display: grid;
-    max-height: 100vh;
+    height: 90vh;
+    justify-self: center;
+    align-items: center;
+    margin: 2vh;
     grid-template-columns: 50% 50%;
     grid-template-areas:
     "left-container right-container";
@@ -10,12 +13,12 @@
         grid-template-areas: 
             "header"
             "experience";
-        border-left-style: none !important;
         border-style: solid;
         border-color: black;
         border-radius: 0 10% 10% 0;
         border-width: 0.3vw;
-        height: 100vh;
+        height: 100%;
+        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
         .header {
             grid-area: header;
             height: 100%;
@@ -59,10 +62,12 @@
             "frameworks"
             "technologies"
             "certifications";
-            border-style: solid solid solid none;
-            border-width: 0.3vw;
-            border-color: black;
-            border-radius: 20% 0 0 20%;
+        border-style: solid solid solid none;
+        border-width: 0.3vw;
+        border-color: black;
+        border-radius: 20% 0 0 20%;
+        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
+        margin: 2vh;
         .skills {
             grid-area: skills;
             display: flex;

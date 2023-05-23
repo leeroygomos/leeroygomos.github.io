@@ -3,11 +3,14 @@
     display: grid;
     background-color: #000000;
     background-size: cover;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: 85% 15%;
+    grid-template-areas: 
+        "card-body"
+        "card-tags";
     overflow: hidden;
     width: 21vw;
-    height: 30vh;
-    border-radius: 2%;
+    height: 25vh;
+    border-radius: 5%;
     border-color: black;
     border-style: solid;
     border-width: 0.2vh;
@@ -23,7 +26,7 @@
         box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
     }
     .card-body{
-        height: 97%;
+        grid-area: card-body;
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
@@ -44,9 +47,10 @@
         }
     }
     .card-tags{
-        height: 3%;
+        grid-area: card-tags;
         display: flex;
         flex-direction: row;
         padding-left: 0.3vw;
+        align-items:center;
     }
 }

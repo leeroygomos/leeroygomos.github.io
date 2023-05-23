@@ -1,6 +1,6 @@
 .grid-container__contact {
     display: grid;
-    max-height: 100vh;
+    height: 90vh;
     grid-template-columns: 60% 40%;
     grid-template-areas:
     "left-container right-container";
@@ -8,11 +8,14 @@
         grid-area: left-container;
         display: flex;
         flex-direction: column;
+        border: solid black 0.3vw;
+        border-radius: 20% 0;
+        margin: 2vw;
+        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
+        justify-content: center;
         p{
-            padding: 10vw 10vw 0 10vw;
-        }
-        .icons{
-
+            padding: 0 8vw;
+            text-align: left;
         }
     }
     .right-container{
@@ -25,61 +28,78 @@
         height: 60vh;
         border: solid black 0.3vw;
         border-radius: 15%;
+        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
         .email-form{
+            display: grid;
+            height: 100%;
+            position: relative;
+            grid-template-rows: 10% 10% 70% 10%;
+            grid-template-areas: 
+                "name"
+                "email"
+                "body"
+                "submit";
             label{
                 font-size: large;
             }
-            .top-row {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                .name {
-                    display: flex;
-                    flex-direction: row;
-                    label {
-                        margin-left:8%
-                    }
-                    input {
-                        width:60%;
-                        margin-left: 4%;
-                    }
-                }
-                .email {
-                    display: flex;
-                    flex-direction: row;
-                    label {
-                        margin-left:4%
-                    }
-                    input {
-                        width:60%;
-                        margin-left: 2%;
-                    }
-                }
-            }
-            .subject {
-                display: flex;
-                flex-direction: row;
-                margin-top: 5%;
+            .name {
+                display: grid;
+                grid-template-columns: 25% 80%;
+                grid-template-areas: auto;
+                padding: 1vh;
                 label {
-                    align-self: first;
-                    margin: 0 2% 0 5%;
+                    text-align: left;
+                    margin-left: 10%;
                 }
                 input {
-                    width: 29%;
+                    width:80%;
+                }
+            }
+            .email {
+                display: grid;
+                grid-template-columns: 25% 80%;
+                grid-template-areas: auto;
+                padding: 1vh;
+                label {
+                    text-align: left;
+                    margin-left: 10%;
+                }
+                input {
+                    width: 80%;
                 }
             }
             .body {
-                display: flex;
-                flex-direction: row;
-                margin-top: 5%;
+                display: grid;
+                grid-template-columns: 25% 80%;
+                grid-template-areas: auto;
+                padding: 1vh;
                 label {
-                    align-self: first;
-                    margin: 0 5%;
+                    text-align: left;
+                    margin-left: 10%;
                 }
                 textarea {
-                    width: 50%;
-                    height: 20vh;
-                    align-self: center;
+                    width: 80%;
+                    height: 25vh;
+                    resize: none;
+                    padding: 1%;
+                }
+            }
+            .submit {
+                position: absolute;
+                bottom: 5%;
+                right: 9%;
+                .button{
+                    font-size: medium;
+                    padding: .5vw;
+                    margin: 0.3vw;
+                    border-radius: 10%;
+                    border-style: solid;
+                    color: white;
+                    background-color: rgb(0, 146, 146);
+                    &:hover{
+                        background-color: burlywood;
+                        transform: scale(1.05);
+                    }
                 }
             }
         }

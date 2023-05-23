@@ -22,26 +22,20 @@ export default function Contact(){
             <div className='right-container'>
                 <h1>Contact Me</h1>
                 <form className='email-form'>
-                    <div className='top-row'>
-                        <div className='name'>
-                            <label htmlFor='name'>Name</label>
-                            <input type='text' name='name' id='name' />
-                        </div>
-                        <div className='email'>
-                            <label htmlFor='fromEmail'>Email</label>
-                            <input type='text' name='fromEmail' id='fromEmail' />
-                        </div>
+                    <div className='name'>
+                        <label htmlFor='name'>Name</label>
+                        <input type='text' name='name' id='name' />
                     </div>
-                    <div className='subject'>
-                        <label htmlFor='subject'>Subject</label>
-                        <input type='text' name='subject' id='subject' />
+                    <div className='email'>
+                        <label htmlFor='fromEmail'>Email</label>
+                        <input type='text' name='fromEmail' id='fromEmail' />
                     </div>
                     <div className='body'>
-                        <label htmlFor='body'>Body</label>
-                        <textarea name='body' id='body'>body</textarea>
+                        <label htmlFor='message'>Message</label>
+                        <textarea id='message'></textarea>
                     </div>
                     <div className='submit'>
-                        <input type='submit' value='Submit' />
+                        <input className='button' type='submit' value='Submit' />
                     </div>
                 </form>
             </div>
