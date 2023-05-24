@@ -1,6 +1,6 @@
 .grid-container__contact {
     display: grid;
-    height: 90vh;
+    height: 80vh;
     grid-template-columns: 60% 40%;
     grid-template-areas:
     "left-container right-container";
@@ -53,6 +53,9 @@
                 }
                 input {
                     width:80%;
+                    &:focus{
+                        outline-color: white;
+                    }
                 }
             }
             .email {
@@ -66,6 +69,9 @@
                 }
                 input {
                     width: 80%;
+                    &:focus{
+                        outline-color: white;
+                    }
                 }
             }
             .body {
@@ -82,6 +88,9 @@
                     height: 25vh;
                     resize: none;
                     padding: 1%;
+                    &:focus{
+                        outline-color: white;
+                    }
                 }
             }
             .submit {
@@ -99,6 +108,7 @@
                     &:hover{
                         background-color: burlywood;
                         transform: scale(1.05);
+                        cursor: pointer;
                     }
                 }
             }

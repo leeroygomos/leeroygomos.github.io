@@ -1,5 +1,35 @@
 .navigation {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     color: aliceblue;
     padding: 1%;
+    z-index: 10;
+    .nav_item {
+        text-align: left;
+        padding: 1vh 1vw 1vh 0.3vw;
+        border-left: solid white 0.5vh;
+        a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: medium;
+        }
+        &:hover {
+            transform: scale(1.15);
+            border-radius: 10%;
+            a{
+                color:rgb(47, 116, 200);
+            }
+            border-left: solid rgb(47, 116, 200) 0.5vh;
+        }
+        &__selected {
+            @extend .nav_item;
+            transform: scale(1.15);
+            border-radius: 10%;
+            a{
+                color:rgb(47, 116, 200);
+            }
+            border-left: solid rgb(47, 116, 200) 0.5vh;
+        }
+    }
 }

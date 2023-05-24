@@ -17,7 +17,6 @@ export const projectItems = [
     },
     {
         title: "crappy bird",
-        // github: "",
         link: "https://play.unity.com/mg/other/build-xgn",
         altText: "Play now!",
         description: "A flappy bird clone creating using Unity!",

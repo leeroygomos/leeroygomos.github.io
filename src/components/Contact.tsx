@@ -1,8 +1,32 @@
+import { useRef } from 'react';
+
 import './Contact.scss';
 import IconGithub from './icons/IconGithub';
 import IconLinkedin from './icons/IconLinkedin';
+import emailjs from '@emailjs/browser';
 
-export default function Contact(){
+const PUBLIC_KEY ='4ZdlF43nCuHpiWQty';
+const SERVICE_ID = 'contact_service';
+const TEMPLATE_ID = 'template_su85u9m';
+
+export default function Contact(props: {showToast: (status:string, msg:string) => void}){
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (evnt: React.FormEvent<HTMLFormElement>) => {
+        evnt.preventDefault();
+        if (form.current === null) {
+            props.showToast('Failed', 'Message failed to send. Please try again.');
+            return;
+        };
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                props.showToast('Success', 'Your message has been sent!');
+                form.current?.reset();
+            }, (error) => {
+                props.showToast('Failed', error.text);
+            });
+    }
+
     return (
         <div className='grid-container__contact'>
             <div className='left-container'>
@@ -21,21 +45,21 @@ export default function Contact(){
 
             <div className='right-container'>
                 <h1>Contact Me</h1>
-                <form className='email-form'>
+                <form className='email-form' ref={form} onSubmit={sendEmail}>
                     <div className='name'>
-                        <label htmlFor='name'>Name</label>
-                        <input type='text' name='name' id='name' />
+                        <label htmlFor='from_name'>Name</label>
+                        <input type='text' name='from_name' id='from_name' required/>
                     </div>
                     <div className='email'>
-                        <label htmlFor='fromEmail'>Email</label>
-                        <input type='text' name='fromEmail' id='fromEmail' />
+                        <label htmlFor='from_email'>Email</label>
+                        <input type='text' name='from_email' id='from_email' required/>
                     </div>
                     <div className='body'>
                         <label htmlFor='message'>Message</label>
-                        <textarea id='message'></textarea>
+                        <textarea id='message' name="message" required />
                     </div>
                     <div className='submit'>
-                        <input className='button' type='submit' value='Submit' />
+                        <input className='button' type='submit' value='Send'/>
                     </div>
                 </form>
             </div>
