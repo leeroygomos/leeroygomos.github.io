@@ -41,7 +41,7 @@ export default function AboutMe(){
             </div>
             <div className='right-container'>
                 <div className='skills'>
-                    <h3>Skills</h3>
+                    <h2>Skills</h2>
                 </div>
                 <div className='languages'>
                     <h5>Languages</h5>

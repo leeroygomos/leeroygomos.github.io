@@ -13,18 +13,18 @@ export default function Projects(){
     return (
         <div className='grid-container__projects'>
             <div className='left-container'>
-            <h2 className='header'>Projects</h2>
-            <div className='items'>
-                {projectItems.map((item, index) => {
-                    return <Card key={index} 
-                                name={item.title} 
-                                imgUrl={item.img} 
-                                tags={item.tags}
-                                onClick={() => selectProject(index)}  
-                                currentProject={currentProject.title}  
-                            />
-                })}
-            </div>
+                <h2 className='header'>Projects</h2>
+                <div className='items'>
+                    {projectItems.map((item, index) => {
+                        return <Card key={index} 
+                                    name={item.title} 
+                                    imgUrl={item.img} 
+                                    tags={item.tags}
+                                    onClick={() => selectProject(index)}  
+                                    currentProject={currentProject.title}  
+                                />
+                    })}
+                </div>
             </div>
             <div className='right-container'>
                 <img className='image' src={currentProject.img} alt={currentProject.title} />

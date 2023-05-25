@@ -63,9 +63,12 @@ function App() {
       <Navigation currentPage={currentPage}/>
       <Toast visible={toastVisible} status={status === 'Success' ? 'Success' : 'Failed'} message={msg} timestamp={timestamp}/>
       <section id='home' ref={headerRef} className={isHeaderVisible ? "show item__header" : "hidden item__header"}>
-        <div>
+        <div className='header'>
           <h1>Lee Roy Gomos</h1>
-          <p>Full Stack Developer</p>
+          <p>Software Developer</p>
+          <div className='profile-picture'>
+            <img src='images/profile.jpg' alt='lee roy'></img>
+          </div>
         </div>
       </section>
       <section id='aboutme' ref={aboutRef} className={isAboutVisible ? "show item__about" : "hidden item__about"}>

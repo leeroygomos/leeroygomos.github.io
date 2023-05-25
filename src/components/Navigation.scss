@@ -8,7 +8,8 @@
     .nav_item {
         text-align: left;
         padding: 1vh 1vw 1vh 0.3vw;
-        border-left: solid white 0.5vh;
+        border-left: solid #EA25B5 0.5vh;
+        background-color: rgba(0, 0, 0, 0.15);
         a {
             color: aliceblue;
             text-decoration: none;
@@ -18,18 +19,18 @@
             transform: scale(1.15);
             border-radius: 10%;
             a{
-                color:rgb(47, 116, 200);
+                color:#04BBEC;
             }
-            border-left: solid rgb(47, 116, 200) 0.5vh;
+            border-left: solid #EA25B5 0.5vh;
         }
         &__selected {
             @extend .nav_item;
             transform: scale(1.15);
             border-radius: 10%;
             a{
-                color:rgb(47, 116, 200);
+                color:#04BBEC;
             }
-            border-left: solid rgb(47, 116, 200) 0.5vh;
+            border-left: solid #EA25B5 0.5vh;
         }
     }
 }

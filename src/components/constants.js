@@ -37,27 +37,27 @@ export const projectItems = [
         img: "/images/projects/voluntutor.png",
         tags: ["Python", "Django", "PostgreSQL", "AWS Elastic Beanstalk"]
     },
-    {
-        title: "Calculations App", 
-        github: "https://github.com/leeroygomos/calcapp", 
-        description: "A web application that calculates fibonacci, factorial, exponents, quadratic formula, and pythagorean theorem. It also does numeric conversions between decimal, hexadecimal, and binary. Developed using Django, C/C++, and Go.", 
-        img: "/images/projects/calc.png",
-        tags: ["C", "C++", "Go", "Python", "Django"]
-    },
-    {
-        title: "Satisfiability Problem Solver", 
-        github: "https://github.com/leeroygomos", 
-        description: "A Python program that implements the DPLL algorithm to check the satisfiability of an expression in Conjunctive Normal Form (CNF). It may also print a list of true literals if the expression is satisfiable.", 
-        img: "/images/projects/satsolver.png",
-        tags: ["Python", "AI"]
-    },
-    {
-        title: "Basic Linux Shell", 
-        github: "https://github.com/leeroygomos", 
-        description: "An implementation of the Linux shell using C with additional commands: !n, type, and history. The commands pwd, exit, and cd were also reimplemented.", 
-        img: "/images/projects/shell.png",
-        tags: ["C", "C++", "Linux"]
-    },
+    // {
+    //     title: "Calculations App", 
+    //     github: "https://github.com/leeroygomos/calcapp", 
+    //     description: "A web application that calculates fibonacci, factorial, exponents, quadratic formula, and pythagorean theorem. It also does numeric conversions between decimal, hexadecimal, and binary. Developed using Django, C/C++, and Go.", 
+    //     img: "/images/projects/calc.png",
+    //     tags: ["C", "C++", "Go", "Python", "Django"]
+    // },
+    // {
+    //     title: "Satisfiability Problem Solver", 
+    //     github: "https://github.com/leeroygomos", 
+    //     description: "A Python program that implements the DPLL algorithm to check the satisfiability of an expression in Conjunctive Normal Form (CNF). It may also print a list of true literals if the expression is satisfiable.", 
+    //     img: "/images/projects/satsolver.png",
+    //     tags: ["Python", "AI"]
+    // },
+    // {
+    //     title: "Basic Linux Shell", 
+    //     github: "https://github.com/leeroygomos", 
+    //     description: "An implementation of the Linux shell using C with additional commands: !n, type, and history. The commands pwd, exit, and cd were also reimplemented.", 
+    //     img: "/images/projects/shell.png",
+    //     tags: ["C", "C++", "Linux"]
+    // },
     {
         title: "Pac-Man AI Search", 
         github: "https://github.com/leeroygomos", 

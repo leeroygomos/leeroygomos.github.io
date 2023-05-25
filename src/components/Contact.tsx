@@ -11,6 +11,7 @@ const TEMPLATE_ID = 'template_su85u9m';
 
 export default function Contact(props: {showToast: (status:string, msg:string) => void}){
     const form = useRef<HTMLFormElement>(null);
+    const captchaRef = useRef<any>(null);
 
     const sendEmail = (evnt: React.FormEvent<HTMLFormElement>) => {
         evnt.preventDefault();
@@ -31,7 +32,8 @@ export default function Contact(props: {showToast: (status:string, msg:string) =
         <div className='grid-container__contact'>
             <div className='left-container'>
                 <p>
-                    I am currently open to new opportunities. Feel free to connect with me on LinkedIn or email me at leeroy.gomos@gmail.com
+                    I am currently open to new job opportunities! Feel free send me a message, 
+                    connect with me on LinkedIn or directly email me at <a href="mailto:leeroy.gomos@gmail.com">leeroy.gomos@gmail.com</a>
                 </p>
                 <div className='icons'>
                     <a href='https://github.com/leeroygomos' target='_blank' rel='noreferrer'>
