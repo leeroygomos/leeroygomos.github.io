@@ -1,3 +1,10 @@
-## Version 3 of portfolio (WIP)
+## Lee Roy Gomos Portfolio
 
-Uses React with TypeScript and SASS
+https://leeroygomos.github.io/
+
+Version 3 of my portfolio. Tech used:
+-React
+-Typescript
+-Sass
+-EmailJS
+
