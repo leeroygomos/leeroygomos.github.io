@@ -47,18 +47,6 @@
       }
     }
   }
-  &__about{
-    @extend .item;
-  }
-  &__projects{
-    @extend .item;
-  }
-  &__experience{
-    @extend .item;
-  }
-  &__contact{
-    @extend .item;
-  }
 }
 
 .footer{
