@@ -1,5 +1,8 @@
 .navigation {
     display: flex;
+    @media (max-width:767px){
+        flex-direction: row;
+    }
     flex-direction: column;
     position: fixed;
     color: aliceblue;
@@ -14,6 +17,9 @@
             color: aliceblue;
             text-decoration: none;
             font-size: medium;
+            @media (max-width: 767px) {
+                padding: 0 1vw;
+            }
         }
         &:hover {
             transform: scale(1.15);

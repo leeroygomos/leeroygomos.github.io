@@ -1,16 +1,19 @@
+@use '../Global.scss';
+
 .grid-container__contact {
-    display: grid;
-    height: 80vh;
-    grid-template-columns: 60% 40%;
-    grid-template-areas:
-    "left-container right-container";
+    @extend .mobile-flex-direction;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh;
     .left-container{
-        grid-area: left-container;
+        @media (min-width: 767px){
+            max-width: 60vw;
+            height: 60vh;
+        }
+        background-color: Global.$background-section;
         display: flex;
         flex-direction: column;
-        border-radius: 20% 0;
-        margin: 2vw;
-        box-shadow: 0.5vh 0.5vw 2vh rgba(0, 0, 0, 0.454);
+        box-shadow: Global.$box-shadow-section;
         justify-content: center;
         transition: all 1s;
         p{
@@ -18,43 +21,36 @@
             text-align: left;
         }
         a {
-            text-decoration: none;
-            color: #04BBEC;
+            @extend .a-template;
         }
         &:hover{
-            transform: scale(1.01);
-            transition: all 1s;
+            @extend .hover-section;
         }
     }
     .right-container{
-        grid-area: right-container;
+        @media (min-width: 767px){
+            width: 25vw;
+            height: 60vh;
+        }
+        width: 100%;
+        background-color: Global.$background-section;
         display: flex;
         flex-direction: column;
-        align-self: center;
-        justify-self: center;
-        width: 25vw;
-        height: 60vh;
-        border: solid black 0.1vw;
-        border-radius: 15%;
-        box-shadow: 0.5vh 0.5vw 2vh rgba(0, 0, 0, 0.454);
+        border-radius: 5%;
+        box-shadow: Global.$box-shadow-section;
         transition: all 1s;
         h1 {
-            color: #04BBEC;
+            color: Global.$light-blue;
         }
         .email-form{
-            display: grid;
+            display: flex;
+            flex-direction: column;
             height: 100%;
             position: relative;
-            grid-template-rows: 10% 10% 70% 10%;
-            grid-template-areas: 
-                "name"
-                "email"
-                "body"
-                "submit";
             label{
-                font-size: large;
+                font-size: medium;
             }
-            .name {
+            .email-form-item {
                 display: grid;
                 grid-template-columns: 25% 80%;
                 grid-template-areas: auto;
@@ -70,31 +66,8 @@
                     }
                 }
             }
-            .email {
-                display: grid;
-                grid-template-columns: 25% 80%;
-                grid-template-areas: auto;
-                padding: 1vh;
-                label {
-                    text-align: left;
-                    margin-left: 10%;
-                }
-                input {
-                    width: 80%;
-                    &:focus{
-                        outline-color: white;
-                    }
-                }
-            }
             .body {
-                display: grid;
-                grid-template-columns: 25% 80%;
-                grid-template-areas: auto;
-                padding: 1vh;
-                label {
-                    text-align: left;
-                    margin-left: 10%;
-                }
+                @extend .email-form-item;
                 textarea {
                     width: 80%;
                     height: 25vh;
@@ -110,24 +83,15 @@
                 bottom: 5%;
                 right: 9%;
                 .button{
+                    @extend .button-template;
                     font-size: medium;
                     padding: .5vw;
                     margin: 0.3vw;
-                    border-radius: 10%;
-                    border-style: none;
-                    color: white;
-                    background-color: #0D3F7C;
-                    &:hover{
-                        background-color: #00214A;
-                        transform: scale(1.05);
-                        cursor: pointer;
-                    }
                 }
             }
         }
         &:hover{
-            transform: scale(1.1);
-            transition: all 1s;
+            @extend .hover-section;
         }
     }
 }

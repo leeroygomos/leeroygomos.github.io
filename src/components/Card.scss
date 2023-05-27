@@ -1,30 +1,43 @@
+@use '../Global.scss';
+
 .card{
-    margin:1vh;
-    display: grid;
-    background-color: black;
-    background-size: cover;
-    grid-template-rows: 75% 10% 15%;
-    grid-template-areas: 
-        "card-body"
-        "card-title"
-        "card-tags";
+    @media (min-width: 767px){
+        width: 21vw;
+        height: 35vh;
+        display: grid;
+        background-size: cover;
+        box-shadow: 0.5vh 0.5vw 3vh #070707;
+        margin:1.5vh;
+        grid-template-rows: 75% 10% 15%;
+        grid-template-areas: 
+            "card-body"
+            "card-title"
+            "card-tags";
+    }
+    @media (max-width: 767px){
+        display: flex;
+        flex-direction: row;
+        margin:1vh;
+    }
+    background-color: Global.$background-section;
     overflow: hidden;
-    width: 21vw;
-    height: 35vh;
     border-radius: 0 0 5% 5%;
-    box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
     &:hover{
         transform: scale(1.05);
         cursor: pointer;
-        box-shadow: 0.5vh 0.5vw 1.5vh rgba(0, 0, 0, 0.454);
+        &:hover{
+            box-shadow: Global.$box-shadow-hover;
+        }
+        box-shadow: Global.$box-shadow-section;
     }
     &__selected{
         @extend .card;
         transform: scale(1.05);
         outline: 1px solid black;
-        box-shadow: 0.5vh 0.5vw 1.5vh rgba(0, 0, 0, 0.454);
+        box-shadow: Global.$box-shadow-hover;
     }
     .card-body{
+        @extend .mobile-hidden;
         grid-area: card-body;
         position: relative;
         background-size: cover;
@@ -33,7 +46,7 @@
             position: absolute;
             top: 0; bottom: 0; right: 0; left: 0;
             opacity: 0;
-            background-color: #00214A;
+            background-color: Global.$dark-blue;
             &__selected{
                 @extend .card-title;
                 opacity: 0.8;
@@ -41,18 +54,19 @@
         }
     }
     .card-title {
-        border-top: solid #EA25B5 0.5vh;
+        border-top: solid Global.$dark-pink 0.5vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 1%;
     }
     .card-tags{
+        @extend .mobile-hidden;
+        @media (min-width: 767px){
+            display: flex;
+        }
         grid-area: card-tags;
-        display: flex;
         flex-direction: row;
         padding-left: 0.3vw;
         align-items:center;
     }
-
 }

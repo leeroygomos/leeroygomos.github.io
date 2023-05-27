@@ -1,117 +1,97 @@
+@use '../Global.scss';
+
 .grid-container__about {
-    display: grid;
-    height: 90vh;
+    @extend .mobile-flex-direction;
+    display: flex;
     justify-self: center;
     align-items: center;
     margin: 2vh;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-    "left-container right-container";
     .left-container {
-        display: grid;
-        grid-template-rows: 30% 70%;
-        grid-template-areas: 
-            "header"
-            "experience";
-        height: 100%;
-        box-shadow: 0.5vh 0.5vw 2vh rgba(0, 0, 0, 0.454);
+        display: flex;
+        flex-direction: column;
+        box-shadow: Global.$box-shadow-section;
+        background-color: Global.$background-section;
         border-radius: 5%;
         transition: all 1s;
+        &:hover{
+            @extend .hover-section;
+        }
         .header {
-            grid-area: header;
-            height: 100%;
             p{
-                font-size: x-large;
+                font-size: medium;
                 text-align: left;
-                margin: 0 7vw;
+                margin: 0vh 6vw;
             }
         }
         .experience {
-            grid-area: experience;
-            padding: 0 1vh;
+            padding-bottom: 2vmin;
             .experience-item {
-                justify-content: center;
                 display: flex;
                 flex-direction: row;
                 .date {
                     height: max-content;
-                    width: 100%;
+                    width: 65%;
                     font-size: medium;
                     text-align: right;
-                    padding: 1vh 1vw 0 7vw;
+                    padding: 1vmin;
                 }
                 .content {
                     height: max-content;
+                    width: 100%;
                     padding-left: 1vw;
-                    padding-right: 5vw;
-                    font-size: large;
+                    padding-right: 2vw;
+                    font-size: medium;
                     text-align: left;
-                    border-left: #EA25B5 solid;
+                    border-left: Global.$dark-pink solid;
                 }
             }
         }
-        &:hover{
-            transform: scale(1.01);
-            transition: all 1s;
-        }
     }
     .right-container {
-        display: grid;
-        grid-template-rows: 20% 15% 15% 15% 15%;
-        grid-template-areas: 
-            "skills"
-            "languages"
-            "frameworks"
-            "technologies"
-            "certifications";
-        box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
+        @media (min-width:767px) {
+            margin: 2vh;
+        }
+        display: flex;
+        flex-direction: column;
+        box-shadow: Global.$box-shadow-section;
+        background-color: Global.$background-section;
         border-radius: 5%;
-        margin: 2vh;
+        padding: 7vmin;
         transition: all 1s;
-        .skills {
-            grid-area: skills;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        justify-content: center;
+        &:hover{
+            @extend .hover-section;
         }
-        .languages {
-            grid-area: languages;
+        .skills-section {
             text-align: left;
-            padding-left: 10vw;
             h5{
-                margin-bottom: 1vh;
-            }
-        }
-        .frameworks {
-            grid-area: frameworks;
-            text-align: left;
-            padding-left: 10vw;
-            h5{
-                margin-bottom: 1vh;
-            }
-        }
-        .technologies {
-            grid-area: technologies;
-            text-align: left;
-            padding-left: 10vw;
-            h5{
-                margin-bottom: 1vh;
+                margin-top: 2vmin;
+                margin-bottom: 0.5vmin;
             }
         }
         .certifications {
             grid-area: certifications;
-            text-align: left;
-            padding-left: 10vw;
-            h5{
-                margin-bottom: 1vh;
+            @extend .skills-section;
+            .cert-badges {
+                display: flex;
+                flex-direction: row;
+                @media (min-width: 767px) {
+                    img {
+                        max-width: 8vw;
+                    }
+                }
+                @media (max-width: 767px) {
+                    flex-wrap: wrap;
+                    img {
+                        max-width: 25vw;
+                        padding: 1vh;
+                    }
+                }
             }
         }
-        &:hover{
-            transform: scale(1.01);
-            transition: all 1s;
-        }
     }
-    h2 {
-        color: #04BBEC;
-    }
+}
+h2 {
+    color: Global.$light-blue;
+    margin-bottom: 1vh;
 }

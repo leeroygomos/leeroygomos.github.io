@@ -60,24 +60,33 @@ function App() {
 
   return (
     <div className="App">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Free Web tutorials"/>
+        <meta name="keywords" content="Lee,Roy,Gomos,Portfolio,HTML,CSS,JavaScript,React,Typescript,Sass,Emailjs,Software,Developer,Full-stack,Engineer"/>
+        <meta name="author" content="Lee Roy Gomos"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </head>
       <Navigation currentPage={currentPage}/>
       <Toast visible={toastVisible} status={status === 'Success' ? 'Success' : 'Failed'} message={msg} timestamp={timestamp}/>
-      <section id='home' ref={headerRef} className={isHeaderVisible ? "show item__header" : "hidden item__header"}>
+      <section id='home' ref={headerRef} className="item__header">
         <div className='header'>
-          <h1>Lee Roy Gomos</h1>
-          <p>Software Developer</p>
+          <div className='header-text'>
+            <h1>Lee Roy Gomos</h1>
+            <p>Software Developer</p>
+          </div>
           <div className='profile-picture'>
             <img src='images/profile.jpg' alt='lee roy'></img>
           </div>
         </div>
       </section>
-      <section id='aboutme' ref={aboutRef} className={isAboutVisible ? "show item__about" : "hidden item__about"}>
-        <AboutMe />
+      <section id='aboutme' ref={aboutRef} className={isAboutVisible ? "show item" : "hidden item"}>
+        <AboutMe/>
       </section>
-      <section id='projects' ref={projectsRef} className={isProjectsVisible ? "show item__projects" : "hidden item__projects"}>
+      <section id='projects' ref={projectsRef} className={isProjectsVisible ? "show item" : "hidden item"}>
         <Projects />
       </section>
-      <section id='contact' ref={contactRef} className={isContactVisible ? "show item__contact" : "hidden item__contact"}>
+      <section id='contact' ref={contactRef} className={isContactVisible ? "show item" : "hidden item"}>
         <Contact showToast={showToast}/>
       </section>
       <footer className="footer">

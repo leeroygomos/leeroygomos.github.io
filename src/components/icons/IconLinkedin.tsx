@@ -6,7 +6,7 @@ function IconLinkedin(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 1024 1024"
-      fill="black"
+      fill="#0D3F7C"
       height="3em"
       width="3em"
       className='icon'

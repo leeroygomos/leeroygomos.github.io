@@ -11,7 +11,6 @@ const TEMPLATE_ID = 'template_su85u9m';
 
 export default function Contact(props: {showToast: (status:string, msg:string) => void}){
     const form = useRef<HTMLFormElement>(null);
-    const captchaRef = useRef<any>(null);
 
     const sendEmail = (evnt: React.FormEvent<HTMLFormElement>) => {
         evnt.preventDefault();
@@ -48,11 +47,11 @@ export default function Contact(props: {showToast: (status:string, msg:string) =
             <div className='right-container'>
                 <h1>Contact Me</h1>
                 <form className='email-form' ref={form} onSubmit={sendEmail}>
-                    <div className='name'>
+                    <div className='email-form-item'>
                         <label htmlFor='from_name'>Name</label>
                         <input type='text' name='from_name' id='from_name' required/>
                     </div>
-                    <div className='email'>
+                    <div className='email-form-item'>
                         <label htmlFor='from_email'>Email</label>
                         <input type='text' name='from_email' id='from_email' required/>
                     </div>

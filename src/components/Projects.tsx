@@ -13,7 +13,7 @@ export default function Projects(){
     return (
         <div className='grid-container__projects'>
             <div className='left-container'>
-                <h2 className='header'>Projects</h2>
+                <h2>Projects</h2>
                 <div className='items'>
                     {projectItems.map((item, index) => {
                         return <Card key={index} 
@@ -28,7 +28,7 @@ export default function Projects(){
             </div>
             <div className='right-container'>
                 <img className='image' src={currentProject.img} alt={currentProject.title} />
-                <h3 className='title'>{currentProject.title}</h3>
+                <h3>{currentProject.title}</h3>
                 <div className='content'>
                 <p>{currentProject.description}</p>
                     { currentProject.link ? <button className='button' onClick={() => window.open(currentProject.link, '_blank')}>View App!</button> : <></> }

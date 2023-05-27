@@ -1,64 +1,54 @@
+@use './Global.scss';
+
 .App{
-  background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(35, 35, 35) 90.2%);
   text-align: center;
-  background-color: black;
+  background: radial-gradient(circle at 50% 30%, rgb(0, 0, 0) 0%, rgb(18, 18, 18) 90.2%);
   overflow-x: hidden;
+  color: #ffffff;
 }
 
 .item{
-  max-height: 100vh;
+  min-height: 90vh;
   display: flex;
-  color: white;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   scroll-padding: 0;
   padding-bottom: 10vh;
+  justify-content: center;
   &__header{
     @extend .item;
     .header{
-      background-color: bl;
+      @media (max-width:767px){
+        flex-direction: column-reverse;
+        justify-content:space-evenly;
+      }
+      @media (min-width:767px){
+        justify-content: space-around;
+      }
       position: relative;
       height: 100vh;
-      margin: 5vh;
       display: flex;
-      text-align: left;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      flex-direction: row;
       font-size: calc(10px + 5vmin);
-      border-radius: 2%;
-      box-shadow: 0.5vh 0.5vw 2vh rgba(0, 0, 0, 0.454);
-      h1 {
-        margin-left: 5vw;
-      }
       p{
         color: #04BBEC;
-        margin-left: 15vw;
+        margin-left: 1vw;
       }
       .profile-picture {
-        position: absolute;
-        width: 100%;
         align-items: center;
-        left: 20vw;
-        display: flex;
-        flex-direction: column;
         img {
           height: 100%;
-          max-height: 50vh;
+          max-height: 40vh;
           border-radius: 50%;
-          box-shadow: 0.5vh 0.5vw 2vh rgba(0, 0, 0, 0.454);
-          &:hover{
-            transform: scale(1.01);
-        }
+          box-shadow: 0vh 0vw 2vh #0D3F7C;
+          border: solid #04BBEC;
         }
       }
-    }
-    &:hover{
-      transform: scale(1.01);
     }
   }
   &__about{
     @extend .item;
-    scroll-snap-align: start;
   }
   &__projects{
     @extend .item;
@@ -68,44 +58,29 @@
   }
   &__contact{
     @extend .item;
-    justify-content: center;
   }
 }
 
 .footer{
-  color: #ffffff;
+  @extend .mobile-flex-direction;
   display: flex;
   position: relative;
-  flex-direction: row;
   padding: 0 2%;
   .info{
     text-align: left;
-    border-left: solid #EA25B5 0.5vh;
+    border-left: solid Global.$dark-pink 0.5vh;
     padding: 1%;
     a{
-      color: #04BBEC;
+      @extend .a-template;
       font-weight: bold;
-      text-decoration: none;
     }
   }
-  .copy{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    bottom: 5%;
+  @media (min-width: 767px) {
+    .copy{
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 5%;
+    }
   }
-}
-
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100vh);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter:blur(0);
-  transform: translateX(0vh);
-  transition: all 1s;
 }

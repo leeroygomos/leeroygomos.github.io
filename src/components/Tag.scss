@@ -1,4 +1,7 @@
 .tag {
+    @media (max-width: 767px) {
+        font-size: medium !important;
+    }
     height: max-content;
     width: max-content;
     background-color: #00214A;
@@ -10,8 +13,4 @@
     font-size: medium;
     text-align: center;
     box-shadow: 0.5vh 0.5vw 1vh rgba(0, 0, 0, 0.454);
-    &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-    }
 }
