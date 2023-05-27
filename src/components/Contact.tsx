@@ -5,10 +5,6 @@ import IconGithub from './icons/IconGithub';
 import IconLinkedin from './icons/IconLinkedin';
 import emailjs from '@emailjs/browser';
 
-const PUBLIC_KEY ='4ZdlF43nCuHpiWQty';
-const SERVICE_ID = 'contact_service';
-const TEMPLATE_ID = 'template_su85u9m';
-
 export default function Contact(props: {showToast: (status:string, msg:string) => void}){
     const form = useRef<HTMLFormElement>(null);
 
@@ -18,7 +14,7 @@ export default function Contact(props: {showToast: (status:string, msg:string) =
             props.showToast('Failed', 'Message failed to send. Please try again.');
             return;
         };
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID!, process.env.REACT_APP_TEMPLATE_ID!, form.current, process.env.REACT_APP_PUBLIC_KEY!)
             .then((result) => {
                 props.showToast('Success', 'Your message has been sent!');
                 form.current?.reset();

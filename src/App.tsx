@@ -94,7 +94,7 @@ function App() {
           Built with <a href='https://react.dev/' target='_blank' rel='noreferrer'>React</a> and <a href='https://www.typescriptlang.org/' target='_blank' rel='noreferrer'>Typescript</a><br/>
           Styled with <a href='https://sass-lang.com/' target='_blank' rel='noreferrer'>Sass</a><br/>
           Contact form utilizes <a href='https://www.emailjs.com/' target='_blank' rel='noreferrer'>EmailJS</a><br/>
-          View <a href='https://github.com/leeroygomos/portfolio-v3' target='_blank' rel='noreferrer'>Source Code</a>
+          View <a href='https://github.com/leeroygomos/leeroygomos.github.io/' target='_blank' rel='noreferrer'>Source Code</a>
         </div>
         <div className='copy'>
           &copy; 2023 Lee Roy Gomos. All Rights Reserved
