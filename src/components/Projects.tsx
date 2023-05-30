@@ -30,7 +30,9 @@ export default function Projects(){
                 <img className='image' src={currentProject.img} alt={currentProject.title} />
                 <h3>{currentProject.title}</h3>
                 <div className='content'>
-                <p>{currentProject.description}</p>
+                    <p>{currentProject.description}</p>
+                    { currentProject.demoUser ? <p className='demo'>{currentProject.demoUser}</p> : <></> }
+                    { currentProject.demoPass ? <p className='demo'>{currentProject.demoPass}</p> : <></> }
                     { currentProject.link ? <button className='button' onClick={() => window.open(currentProject.link, '_blank')}>View App!</button> : <></> }
                     { currentProject.github ? <button className='button' onClick={() => window.open(currentProject.github, '_blank')}>Github</button> : <></> }
                 </div>

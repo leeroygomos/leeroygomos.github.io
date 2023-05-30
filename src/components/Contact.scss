@@ -70,7 +70,7 @@
                 @extend .email-form-item;
                 textarea {
                     width: 80%;
-                    height: 25vh;
+                    height: 23vh;
                     resize: none;
                     padding: 1%;
                     &:focus{
@@ -79,14 +79,14 @@
                 }
             }
             .submit {
-                position: absolute;
-                bottom: 5%;
-                right: 9%;
+                display: flex;
+                justify-content:flex-end;
                 .button{
                     @extend .button-template;
                     font-size: medium;
                     padding: .5vw;
                     margin: 0.3vw;
+                    margin-right: 11%;
                 }
             }
         }
