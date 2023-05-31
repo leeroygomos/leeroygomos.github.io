@@ -47,9 +47,9 @@ export const projectItems = [
         tags: ["Unity", "C#"]
     },
     {
-        title: "Waifu Recommender (WIP)", 
+        title: "Recomendation System (WIP)", 
         github: "https://github.com/leeroygomos/waifu_recommender",  
-        description: "A content-based filtering recommendation full stack web application which recommends anime based on the characters(waifus) that you like. Uses techniques such as Term Frequency, Inverse Document Frequency, and Matrix Factorization to generate results.",  
+        description: "A full stack web application which recommends anime based on the characters that you like. Uses techniques such as Term Frequency, Inverse Document Frequency, and Matrix Factorization to generate results.",  
         img: "/images/projects/placeholder.png",
         tags: ["Flask", "Python", "React", "PostgreSQL", 'Rest APIs', 'AI']
     },
@@ -76,9 +76,9 @@ export const projectItems = [
     // },
 ];
 
-export const languages = ["JavaScript", "Python", "C++", "C", "Apex", "HTML", "CSS", "SQL"];
-export const frameworks = ["Node.js", "React", "Express.js", "Django"];
-export const technologies = ["Salesforce", "Git", "Docker", "Heroku", "PostgreSQL"];
+export const languages = ["JavaScript", "Python", "Apex", "HTML", "CSS", "SQL", "C", "C++",];
+export const frameworks = ["Node.js", "React", "Express.js", "Flask", "Django"];
+export const technologies = ["Salesforce", "Git", "Heroku", "PostgreSQL", "Docker",];
 
 export const certifications = [
     {
