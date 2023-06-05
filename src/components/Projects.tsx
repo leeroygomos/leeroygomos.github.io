@@ -16,7 +16,7 @@ export default function Projects(){
         <div className='grid-container__projects'>
             <div className='left-container'>
                 <h2>Projects</h2>
-                {/* <div className='extended-projects'><a href='/AllProjects' target='_blank'>View full project archive</a></div> */}
+                <div className='extended-projects'><a href='/AllProjects' target='_blank'>View full project archive</a></div>
                 <div className='items'>
                     {showcasedProjectItems.map((item, index) => {
                         return <Card key={index} 

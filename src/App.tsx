@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.scss';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollIntoView from './components/Animations';
 import Navigation from './components/Navigation';
@@ -107,6 +107,7 @@ function App() {
             </footer>
           </div>
         }/>
+        <Route path='*' element={<Navigate replace to='/AllProjects'/>} />
         <Route path='/AllProjects' element={<AllProjects/>}/>
       </Routes>
     </BrowserRouter>
