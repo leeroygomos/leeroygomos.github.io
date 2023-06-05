@@ -24,6 +24,15 @@
                 flex-direction: row;
             }
         }
+        .extended-projects{
+            font-size: large;
+            width: 100%;
+            text-align: right;
+            padding: 0 5% 1% 0;
+            a {
+                @extend .a-template;
+            }
+        }
     }
     .right-container {
         @media (min-width:767px) {

@@ -24,12 +24,11 @@ export default function AboutMe(){
                     {/* TODO: MAKE REUSABLE COMPONENT */}
                     <div className='experience-item'>
                         <div className='date'>
-                            <p>June 2022 - May 2023 <br/>
-                                August 2021 - May 2022
+                            <p>August 2021 - March 2023 <br/>
                             </p>
                         </div>
                         <div className='content'>
-                            <h4>Technical Consultant - Salesforce, <br/> Associate Developer - Traction on Demand</h4>
+                            <h4>Technical Consultant, Associate Developer - Salesforce (prev. Traction on Demand)</h4>
                             <p>
                                 Built a custom web application form using Salesforce's Lightning Web Components framework and developed back-end automation using Apex, SOQL, and Salesforce declarative configuration. Worked in an Agile scrum environment with regular release cycles, engaging with clients for design discussions, code reviews, grooming sessions, and retrospectives.
                             </p>
@@ -55,7 +54,7 @@ export default function AboutMe(){
                     {languages.map(language => {return <Tag key={language} text={language} size='x-large'/>})}
                 </div>
                 <div className='skills-section'>
-                    <h5>Frameworks</h5>
+                    <h5>Libraries and Frameworks</h5>
                     {frameworks.map(framework => {return <Tag key={framework} text={framework} size='x-large'/>})}
                 </div>
                 <div className='skills-section'>

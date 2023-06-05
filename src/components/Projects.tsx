@@ -3,19 +3,22 @@ import './Projects.scss';
 import Card from './Card';
 import {projectItems} from './constants';
 
+const showcasedProjectItems = projectItems.filter(item => item.showcase === true);
+
 export default function Projects(){
-    const [currentProject, setCurrentProject] = useState(projectItems[0]);
+    const [currentProject, setCurrentProject] = useState(showcasedProjectItems[0]);
 
     const selectProject = (index : number) => {
-        setCurrentProject(projectItems[index]);
+        setCurrentProject(showcasedProjectItems[index]);
     }
 
     return (
         <div className='grid-container__projects'>
             <div className='left-container'>
                 <h2>Projects</h2>
+                <div className='extended-projects'><a href='/AllProjects' target='_blank'>View full project archive</a></div>
                 <div className='items'>
-                    {projectItems.map((item, index) => {
+                    {showcasedProjectItems.map((item, index) => {
                         return <Card key={index} 
                                     name={item.title} 
                                     imgUrl={item.img} 

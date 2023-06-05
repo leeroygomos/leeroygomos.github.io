@@ -1,0 +1,41 @@
+@use '../Global.scss';
+
+.return {
+    @extend .a-template;
+    padding: 1%;
+}
+
+.header {
+    color: white;
+    text-align: center;
+}
+
+.allProjects {
+    width: 100%;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+    border-collapse: collapse; 
+    tr{
+        border-bottom: 1px solid Global.$dark-pink;
+    }
+    .table-header{
+        th {
+            font-size: large;
+            color: Global.$light-blue;
+            padding: 1%;
+        }
+    }
+    .project {
+        .project-title{
+            font-size: larger;
+            font-weight: bold;
+        }
+        td {
+            padding: 0.5%;
+            a {
+                @extend .a-template;
+            }
+        }
+    }
+}
