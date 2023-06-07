@@ -51,15 +51,15 @@ export default function AboutMe(){
                 <h2>Skills</h2>
                 <div className='skills-section'>
                     <h5>Languages</h5>
-                    {languages.map(language => {return <Tag key={language} text={language} size='x-large'/>})}
+                    {languages.map(language => {return <Tag key={language} text={language} size='large'/>})}
                 </div>
                 <div className='skills-section'>
                     <h5>Libraries and Frameworks</h5>
-                    {frameworks.map(framework => {return <Tag key={framework} text={framework} size='x-large'/>})}
+                    {frameworks.map(framework => {return <Tag key={framework} text={framework} size='large'/>})}
                 </div>
                 <div className='skills-section'>
                     <h5>Technologies</h5>
-                    {technologies.map(tech => {return <Tag key={tech} text={tech} size='x-large'/>})}
+                    {technologies.map(tech => {return <Tag key={tech} text={tech} size='large'/>})}
                 </div>
                 <div className='certifications'>
                     <h5>Certifications</h5>
