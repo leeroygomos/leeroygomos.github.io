@@ -19,19 +19,59 @@ export default function AboutMe(){
                         games during my downtime.
                     </p>
                 </div>
+                <h2>Experience</h2>
                 <div className='experience'>
-                    <h2>Experience</h2>
                     {/* TODO: MAKE REUSABLE COMPONENT */}
                     <div className='experience-item'>
                         <div className='date'>
-                            <p>August 2021 - March 2023 <br/>
+                            <p>June 2022 - March 2023 <br/>
                             </p>
                         </div>
                         <div className='content'>
-                            <h4>Technical Consultant, Associate Developer - Salesforce (prev. Traction on Demand)</h4>
-                            <p>
-                                Built a custom web application form using Salesforce's Lightning Web Components framework and developed back-end automation using Apex, SOQL, and Salesforce declarative configuration. Worked in an Agile scrum environment with regular release cycles, engaging with clients for design discussions, code reviews, grooming sessions, and retrospectives.
+                            <h4>Technical Consultant - Salesforce</h4>
+                            <ul>
+                                <li>
+                                    Built a custom web application form using Salesforce's Lightning Web Components framework, utilizing Javascript, HTML and CSS for the frontend                                
+                                </li>
+                                <li>
+                                    Developed backend processes with Apex and database transactions with SOQL
+                                </li>
+                                <li>
+                                    Actively engage with client on feature and design decisions with regular standups, grooming sessions, and retrospectives
+                                </li>
+                                <li>
+                                    Participated in code reviews with internal team to ensure excellent code quality
+                                </li>
+                                <li>
+                                    Developed and facilitated training for new developers in LWC and Aura
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='experience-item'>
+                        <div className='date'>
+                            <p>August 2021 - May 2022 <br/>
                             </p>
+                        </div>
+                        <div className='content'>
+                            <h4>Associate Developer - Traction on Demand (acquired by Salesforce)</h4>
+                            <ul>
+                                    <li>
+                                        In collaboration with the client’s Business Technology team, designed and refactored their Salesforce case management system for technical debt
+                                    </li>
+                                    <li>
+                                        Rewrote Apex code to align with enterprise design patterns via the FFLIB framework for Apex triggers
+                                    </li>
+                                    <li>
+                                        ewrote Apex code to align with enterprise design patterns via the FFLIB framework for Apex triggers
+                                    </li>
+                                    <li>
+                                        Employed Salesforce’s Platform Events to handle async processes                                    
+                                    </li>
+                                    <li>
+                                        eveloped unit and functional tests for Apex code via the Apex Mocks library to allow for mocking and stubbing
+                                    </li>
+                                </ul>
                         </div>
                     </div>
                     <div className='experience-item'>
@@ -39,10 +79,21 @@ export default function AboutMe(){
                             <p>January 2021 - August 2021</p>
                         </div>
                         <div className='content'>
-                            <h4>Developer Intern - Traction on Demand</h4>
-                            <p>
-                                Collaborated with the client development team to refactor existing systems, addressing technical debt and enhancing scalability. Provided comprehensive technical documentation for the client, while also implementing enterprise design architecture and conducting thorough testing to ensure code correctness.
-                            </p>
+                            <h4>Developer Intern - Traction on Demand (acquired by Salesforce)</h4>
+                            <ul>
+                                <li>
+                                    Analyzed and documented client Salesforce system for technical debt; designed and refactored for a more optimal and scalable configuration
+                                </li>
+                                <li>
+                                    Worked in an agile scrum with the client’s Business Technology team
+                                </li>
+                                <li>
+                                    Presented design solutions to client team and stakeholders for approval
+                                </li>
+                                <li>
+                                Utilized Confluence and LucidChart for documentation, Jira for project management, Github and Gearset for CI/CD
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

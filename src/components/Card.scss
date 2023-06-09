@@ -63,6 +63,7 @@
         @extend .mobile-hidden;
         @media (min-width: 767px){
             display: flex;
+            flex-wrap: wrap;
         }
         grid-area: card-tags;
         flex-direction: row;
