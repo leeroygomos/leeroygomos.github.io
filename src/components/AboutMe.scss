@@ -5,7 +5,9 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    max-height: 95vh;
+    @media (min-width:767px) {
+        max-height: 95vh;
+    }
     margin: 2vh;
     .left-container {
         display: flex;
