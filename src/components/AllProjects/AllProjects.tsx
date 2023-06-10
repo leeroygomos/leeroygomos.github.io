@@ -1,7 +1,6 @@
 import './AllProjects.scss';
-import '../Global.scss';
-import {projectItems} from './constants';
-import Tag from './Tag'
+import {projectItems} from '../constants';
+import Tag from '../Tag/Tag'
 
 export default function AllProjects(){
     projectItems.sort((a,b) => (a.year < b.year) ? 1 : -1);

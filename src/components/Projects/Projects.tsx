@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Projects.scss';
-import Card from './Card';
-import {projectItems} from './constants';
+import Card from '../Card/Card';
+import {projectItems} from '../constants';
 
 const showcasedProjectItems = projectItems.filter(item => item.showcase === true);
 

@@ -3,12 +3,12 @@ import './App.scss';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollIntoView from './components/Animations';
-import Navigation from './components/Navigation';
-import AboutMe from './components/AboutMe';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Toast from './components/Toast';
-import AllProjects from './components/AllProjects';
+import Navigation from './components/Navigation/Navigation';
+import AboutMe from './components/AboutMe/AboutMe';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Toast from './components/Toast/Toast';
+import AllProjects from './components/AllProjects/AllProjects';
 
 function App() {
   const options = {

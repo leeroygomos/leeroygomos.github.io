@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 import './Toast.scss';
-import IconCheck from './icons/IconCheck';
-import IconError from './icons/IconError';
+import IconCheck from '../icons/IconCheck';
+import IconError from '../icons/IconError';
 
 export default function Toast(props: {visible: boolean, status: string, message: string, timestamp: number}){
     const [className, setClassName] = useState('');

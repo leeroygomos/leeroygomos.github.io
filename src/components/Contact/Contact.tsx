@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
 import './Contact.scss';
-import IconGithub from './icons/IconGithub';
-import IconLinkedin from './icons/IconLinkedin';
+import IconGithub from '../icons/IconGithub';
+import IconLinkedin from '../icons/IconLinkedin';
 import emailjs from '@emailjs/browser';
 
 export default function Contact(props: {showToast: (status:string, msg:string) => void}){

@@ -1,7 +1,7 @@
 import './AboutMe.scss';
-import '../App.scss';
-import Tag from './Tag';
-import { languages, frameworks, technologies, certifications } from './constants';
+import '../../App.scss';
+import Tag from '../Tag/Tag';
+import { languages, frameworks, technologies, certifications } from '../constants';
 
 export default function AboutMe(){
     return (
@@ -31,13 +31,13 @@ export default function AboutMe(){
                             <h4>Technical Consultant - Salesforce</h4>
                             <ul>
                                 <li>
-                                    Built a custom web application form using Salesforce's Lightning Web Components framework, utilizing Javascript, HTML and CSS for the frontend                                
+                                    Actively engage with client stakeholders to build a custom web application form using Salesforce's Lightning Web Components framework, utilizing Javascript, HTML and CSS for the front end, and Apex (Salesforce's Java-like language) for the backend
                                 </li>
                                 <li>
-                                    Developed backend processes with Apex and database transactions with SOQL
+                                    Used Salesforce Platform Events to communicate with Mulesoft for biometric verification via GBG's GreenID
                                 </li>
                                 <li>
-                                    Actively engage with client on feature and design decisions with regular standups, grooming sessions, and retrospectives
+                                Implemented a guest user feature, allowing users to completely bypass account creation by utilizing form data to automatically create an account
                                 </li>
                                 <li>
                                     Participated in code reviews with internal team to ensure excellent code quality
@@ -57,19 +57,16 @@ export default function AboutMe(){
                             <h4>Associate Developer - Traction on Demand (acquired by Salesforce)</h4>
                             <ul>
                                     <li>
-                                        In collaboration with the client’s Business Technology team, designed and refactored their Salesforce case management system for technical debt
+                                        In collaboration with the client's Business Technology team, designed and refactored their Salesforce case management system for technical debt
                                     </li>
                                     <li>
-                                        Rewrote Apex code to align with enterprise design patterns via the FFLIB framework for Apex triggers
+                                        Rewrote Apex code to align with enterprise design patterns via the FFLIB framework for Apex triggers for a more clean and scalable codebase
                                     </li>
                                     <li>
-                                        ewrote Apex code to align with enterprise design patterns via the FFLIB framework for Apex triggers
+                                        Employed Salesforce's Platform Events to handle async processes, decreasing operation time by up to 90%                              
                                     </li>
                                     <li>
-                                        Employed Salesforce’s Platform Events to handle async processes                                    
-                                    </li>
-                                    <li>
-                                        eveloped unit and functional tests for Apex code via the Apex Mocks library to allow for mocking and stubbing
+                                        Developed unit and functional tests for Apex code via the Apex Mocks library to allow for mocking and stubbing
                                     </li>
                                 </ul>
                         </div>
@@ -85,7 +82,7 @@ export default function AboutMe(){
                                     Analyzed and documented client Salesforce system for technical debt; designed and refactored for a more optimal and scalable configuration
                                 </li>
                                 <li>
-                                    Worked in an agile scrum with the client’s Business Technology team
+                                    Worked in an agile scrum with the client's Business Technology team
                                 </li>
                                 <li>
                                     Presented design solutions to client team and stakeholders for approval

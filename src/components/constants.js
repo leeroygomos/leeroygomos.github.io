@@ -72,7 +72,7 @@ export const projectItems = [
         github: "https://github.com/leeroygomos/waifu_recommender",  
         description: "A full stack web application which recommends anime based on the characters that you like. Uses techniques such as Term Frequency, Inverse Document Frequency, and Matrix Factorization to generate results.",  
         img: "/images/projects/placeholder.png",
-        tags: ["Flask", "Python", "React", "PostgreSQL", 'Rest APIs', 'AI'],
+        tags: ["Flask", "Python", "React", "PostgreSQL", 'Rest APIs'],
         year: 2023,
         showcase: true
     },

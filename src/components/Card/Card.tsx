@@ -1,5 +1,5 @@
 import './Card.scss';
-import Tag from './Tag';
+import Tag from '../Tag/Tag';
 
 export default function Card(props : {name: string, imgUrl?: string, tags: string[], onClick: () => void, currentProject: string}) {
     
